@@ -45,7 +45,8 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.instructions').delay(500).fadeIn('slow').delay(3000).fadeOut('slow');
+	$('.instructions-1').delay(500).fadeIn('slow').delay(3000).fadeOut('slow');
+	$('.instructions-2').delay(4000).fadeIn('slow').delay(3000).fadeOut('slow');
 
 });
 

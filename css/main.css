@@ -73,7 +73,7 @@ body {
 
 /* Instructions */
 
-.instructions {
+.instructions-1 {
 	display: none;
 	height: 50px;
 	width: 400px;
@@ -83,5 +83,18 @@ body {
 	top: 75px;
 	left: 650px;
 	font-size: 2em;
-	font-family: sans-serif;
+	font-family: 'Indie Flower', cursive;
+}
+
+.instructions-2 {
+	display: none;
+	height: 50px;
+	width: 400px;
+	float: left;
+	padding: 2em;
+	position: absolute;
+	top: 155px;
+	left: 650px;
+	font-size: 2em;
+	font-family: 'Indie Flower', cursive;
 }
