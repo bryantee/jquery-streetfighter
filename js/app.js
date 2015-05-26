@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+	var isRyuReady = false;
+
 	$('.ryu').mouseenter(function() {
 		$('.ryu-still').hide();
 		$('.ryu-ready').show();
@@ -25,23 +28,26 @@ $(document).ready(function() {
 		$('.ryu-ready').show();
 	});
 
-	$(document).one('keydown', function(e) {
-		if (e.which === 88) {
+	$(document).keydown(function(e) {
+		if (e.which === 88 && isRyuReady === false ) {
 			console.log('X key pressed');
 			// show ryu-cool.gif
 			playDust();
 			$('.ryu-still').hide();
 			$('.ryu-ready').hide();
 			$('.ryu-cool').show();
+			isRyuReady = true;
 		}
 	});
 	$(document).keyup(function(e) {
-		if (e.which === 88) {
+		if (e.which === 88 && isRyuReady === true ) {
 			console.log('X keyup');
 			stopDust();
 			$('.ryu-cool').hide();
+			$('.ryu-throwing').hide()
 			$('.ryu-still').show();
 			console.log('Reached the end of keyup');
+			isRyuReady = false;
 		}
 	});
 
@@ -66,3 +72,4 @@ function stopDust() {
 	$('#another-one')[0].pause();
 	$('#another-one')[0].currentTime = 0;
 }
+
